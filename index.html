@@ -106,50 +106,35 @@
             gap: 6px;
         }
         /* Cost staircase */
-        .cost-chart {
-            display: flex;
-            align-items: flex-end;
-            gap: 16px;
-            margin-top: 16px;
-            height: 200px;
-        }
-        .cost-bar {
-            flex: 1;
+        .cost-rows {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            text-align: center;
+            gap: 14px;
+            margin-top: 20px;
         }
-        .cost-bar .bar {
-            width: 100%;
-            border-radius: 12px 12px 0 0;
+        .cost-row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.1em;
-            transition: height 0.8s ease;
+            gap: 16px;
+            border-radius: 12px;
+            padding: 14px 20px;
         }
-        .cost-bar .bar-label {
-            margin-top: 12px;
-            font-size: 0.7em;
-            color: #aaa;
-            line-height: 1.4;
-        }
-        .cost-bar .bar-cost {
-            font-size: 0.65em;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .bar-1 { background: linear-gradient(180deg, #00d4ff33, #00d4ff11); height: 50px; }
-        .bar-2 { background: linear-gradient(180deg, #f0a03055, #f0a03011); height: 100px; }
-        .bar-3 { background: linear-gradient(180deg, #ff445555, #ff445511); height: 160px; }
+        .cost-row-1 { background: rgba(0,212,255,0.08); border-left: 4px solid #00d4ff; }
+        .cost-row-2 { background: rgba(240,160,48,0.08); border-left: 4px solid #f0a030; }
+        .cost-row-3 { background: rgba(255,68,85,0.08); border-left: 4px solid #ff4455; }
+        .cost-row .cost-icon { font-size: 1.6em; min-width: 40px; text-align: center; }
+        .cost-row .cost-info { flex: 1; }
+        .cost-row .cost-info strong { color: #fff; font-size: 0.75em; display: block; margin-bottom: 2px; }
+        .cost-row .cost-info span { color: #aaa; font-size: 0.6em; }
+        .cost-row .cost-price { font-size: 0.8em; min-width: 60px; text-align: right; }
+        .cost-price-low { color: #00d4ff; }
+        .cost-price-mid { color: #f0a030; }
+        .cost-price-high { color: #ff4455; }
         .cost-message {
             text-align: center;
-            margin-top: 16px;
+            margin-top: 14px;
             color: var(--accent);
-            font-size: 1em;
+            font-size: 0.85em;
             font-weight: 600;
         }
         /* Steps */
@@ -437,21 +422,21 @@
             <!-- Slide 7: Cost of error -->
             <section data-background-gradient="radial-gradient(circle at 50% 80%, #0a1628, #0a0a0f)">
                 <h2>💰 Цена ошибки на разных этапах</h2>
-                <div class="cost-chart">
-                    <div class="cost-bar fragment">
-                        <div class="bar-cost">💲</div>
-                        <div class="bar bar-1">📝</div>
-                        <div class="bar-label"><strong>ТЗ / Спецификация</strong><br>Прочитал → нашёл ошибку → поправил текст</div>
+                <div class="cost-rows">
+                    <div class="cost-row cost-row-1 fragment">
+                        <div class="cost-icon">📝</div>
+                        <div class="cost-info"><strong>ТЗ / Спецификация</strong><span>Прочитал → нашёл ошибку → поправил текст</span></div>
+                        <div class="cost-price cost-price-low">💲</div>
                     </div>
-                    <div class="cost-bar fragment">
-                        <div class="bar-cost">💲💲</div>
-                        <div class="bar bar-2">🎨</div>
-                        <div class="bar-label"><strong>Дизайн / Прототип</strong><br>Кликабельный прототип — протыкал, увидел проблему</div>
+                    <div class="cost-row cost-row-2 fragment">
+                        <div class="cost-icon">🎨</div>
+                        <div class="cost-info"><strong>Дизайн / Прототип</strong><span>Кликабельный прототип — протыкал, увидел проблему</span></div>
+                        <div class="cost-price cost-price-mid">💲💲</div>
                     </div>
-                    <div class="cost-bar fragment">
-                        <div class="bar-cost">💲💲💲</div>
-                        <div class="bar bar-3">⚙️</div>
-                        <div class="bar-label"><strong>Фронт + Бэк</strong><br>Рефакторинг, затрагивает много файлов и модулей</div>
+                    <div class="cost-row cost-row-3 fragment">
+                        <div class="cost-icon">⚙️</div>
+                        <div class="cost-info"><strong>Фронт + Бэк</strong><span>Рефакторинг, затрагивает много файлов и модулей</span></div>
+                        <div class="cost-price cost-price-high">💲💲💲</div>
                     </div>
                 </div>
                 <p class="cost-message fragment">Чем раньше ловим ошибку — тем дешевле 🎯</p>

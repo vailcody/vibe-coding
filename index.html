@@ -20,7 +20,7 @@
             text-align: left;
         }
         .reveal .slides section {
-            padding: 40px 60px;
+            padding: 20px 30px;
         }
         .reveal h1, .reveal h2, .reveal h3 {
             color: var(--accent);
@@ -28,11 +28,11 @@
             font-weight: 700;
             letter-spacing: -0.02em;
         }
-        .reveal h1 { font-size: 2.2em; }
-        .reveal h2 { font-size: 1.6em; margin-bottom: 0.6em; }
-        .reveal h3 { font-size: 1.2em; }
+        .reveal h1 { font-size: 1.1em; }
+        .reveal h2 { font-size: 1.3em; margin-bottom: 0.4em; }
+        .reveal h3 { font-size: 1em; }
         .reveal p, .reveal li {
-            font-size: 0.85em;
+            font-size: 0.7em;
             line-height: 1.6;
             color: #ccc;
         }
@@ -49,7 +49,7 @@
         }
         .reveal .subtitle {
             color: #888;
-            font-size: 0.9em;
+            font-size: 0.6em;
             margin-top: 0.3em;
         }
         .reveal .highlight {
@@ -63,7 +63,7 @@
             border-radius: 8px;
             padding: 4px 14px;
             margin: 4px;
-            font-size: 0.75em;
+            font-size: 0.6em;
             color: #ddd;
         }
         /* Title slide */
@@ -71,7 +71,7 @@
             text-align: center !important;
         }
         .title-slide h1 {
-            font-size: 2.6em;
+            font-size: 2.2em;
             margin-bottom: 0.1em;
         }
         .title-slide .author {
@@ -81,24 +81,24 @@
         }
         .title-slide .date {
             color: #666;
-            font-size: 0.85em;
+            font-size: 0.7em;
         }
         /* Tool grid */
         .tool-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 12px;
         }
         .tool-card {
             background: var(--bg-card);
             border: 1px solid rgba(0,212,255,0.15);
             border-radius: 12px;
-            padding: 20px;
+            padding: 14px;
         }
         .tool-card h3 {
             margin: 0 0 10px 0;
-            font-size: 0.95em;
+            font-size: 0.65em;
         }
         .tool-card .tools {
             display: flex;
@@ -109,9 +109,9 @@
         .cost-chart {
             display: flex;
             align-items: flex-end;
-            gap: 30px;
-            margin-top: 30px;
-            height: 320px;
+            gap: 16px;
+            margin-top: 16px;
+            height: 250px;
         }
         .cost-bar {
             flex: 1;
@@ -127,7 +127,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8em;
+            font-size: 1.1em;
             transition: height 0.8s ease;
         }
         .cost-bar .bar-label {
@@ -137,7 +137,7 @@
             line-height: 1.4;
         }
         .cost-bar .bar-cost {
-            font-size: 0.8em;
+            font-size: 0.65em;
             color: var(--accent);
             font-weight: 700;
             margin-bottom: 8px;
@@ -147,7 +147,7 @@
         .bar-3 { background: linear-gradient(180deg, #ff445555, #ff445511); height: 260px; }
         .cost-message {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 16px;
             color: var(--accent);
             font-size: 1em;
             font-weight: 600;
@@ -157,25 +157,25 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            margin-top: 20px;
+            margin-top: 12px;
         }
         .step {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 12px;
             background: var(--bg-card);
             border-radius: 12px;
-            padding: 18px 24px;
+            padding: 12px 18px;
             border-left: 4px solid var(--accent);
         }
         .step-num {
-            font-size: 1.8em;
+            font-size: 1.1em;
             font-weight: 800;
             color: var(--accent);
             min-width: 50px;
             text-align: center;
         }
-        .step-text { color: #ccc; font-size: 0.85em; }
+        .step-text { color: #ccc; font-size: 0.7em; }
         .step-text strong { color: #fff; }
         /* Check list */
         .check-list li::before {
@@ -184,28 +184,28 @@
             width: auto !important;
             height: auto !important;
             border-radius: 0 !important;
-            font-size: 0.9em;
+            font-size: 0.6em;
         }
         /* Harvi card */
         .harvi-card {
             background: var(--bg-card);
             border: 1px solid rgba(0,212,255,0.2);
             border-radius: 16px;
-            padding: 30px;
-            margin-top: 20px;
+            padding: 12px;
+            margin-top: 12px;
             text-align: center;
         }
         .harvi-card .flag { font-size: 3em; }
-        .harvi-card h3 { text-align: center; font-size: 1.4em; margin: 10px 0; }
+        .harvi-card h3 { text-align: center; font-size: 1.1em; margin: 10px 0; }
         .harvi-features {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 12px;
             flex-wrap: wrap;
             margin-top: 15px;
         }
         .harvi-features .tag {
-            font-size: 0.8em;
+            font-size: 0.65em;
             padding: 8px 18px;
         }
         /* Demo slide */
@@ -217,34 +217,34 @@
         }
         .demo-slide .rocket {
             font-size: 5em;
-            margin-top: 20px;
+            margin-top: 12px;
         }
         /* Practice wireframe */
         .wireframe {
             display: flex;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 16px;
+            margin-top: 12px;
         }
         .wireframe-screen {
             flex: 1;
             background: var(--bg-card);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
-            padding: 20px;
+            padding: 14px;
         }
         .wireframe-screen h3 {
             text-align: center;
-            font-size: 0.85em;
+            font-size: 0.7em;
             margin-bottom: 12px;
         }
         .wireframe-placeholder {
             background: rgba(0,212,255,0.08);
             border: 1px dashed rgba(0,212,255,0.3);
             border-radius: 8px;
-            padding: 20px;
+            padding: 14px;
             text-align: center;
             color: #666;
-            font-size: 0.75em;
+            font-size: 0.6em;
             margin: 8px 0;
         }
         /* Next slides */
@@ -252,16 +252,16 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            margin-top: 20px;
+            margin-top: 12px;
         }
         .next-item {
             background: var(--bg-card);
             border-radius: 12px;
-            padding: 20px;
+            padding: 14px;
             border-left: 4px solid var(--accent);
         }
         .next-item h3 { margin: 0 0 6px 0; }
-        .next-item p { margin: 0; font-size: 0.8em; }
+        .next-item p { margin: 0; font-size: 0.65em; }
         /* QA */
         .qa-slide {
             text-align: center !important;
@@ -273,8 +273,8 @@
             margin: 0 auto;
         }
         .qa-channel {
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 16px;
+            padding: 14px;
             background: var(--bg-card);
             border-radius: 12px;
             display: inline-block;
@@ -289,17 +289,17 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 12px;
-            margin-top: 20px;
+            margin-top: 12px;
         }
         .about-item {
             background: var(--bg-card);
             border-radius: 10px;
             padding: 14px 20px;
-            font-size: 0.8em;
+            font-size: 0.65em;
             color: #ccc;
         }
         .about-item .emoji {
-            font-size: 1.2em;
+            font-size: 1em;
             margin-right: 10px;
         }
     </style>
@@ -311,7 +311,7 @@
             <!-- Slide 1: Title -->
             <section class="title-slide" data-background-gradient="radial-gradient(circle at 50% 50%, #0a1628, #0a0a0f)">
                 <h1>Вайб-кодинг</h1>
-                <p style="color: #aaa; font-size: 1.2em; margin-top: -10px;">Новый подход в разработке</p>
+                <p style="color: #aaa; font-size: 1em; margin-top: -10px;">Новый подход в разработке</p>
                 <p class="author">Константин Чуйков</p>
                 <p class="date">19 марта 2026</p>
                 <aside class="notes">Представиться, поприветствовать аудиторию. Спросить кто уже пробовал AI-инструменты для разработки.</aside>
@@ -344,19 +344,19 @@
             <!-- Slide 3: What is vibe coding -->
             <section data-background-gradient="radial-gradient(circle at 70% 30%, #0a1628, #0a0a0f)">
                 <h2>Что такое вайб-кодинг?</h2>
-                <p class="fragment" style="font-size: 1em; color: #fff; margin: 20px 0;">
+                <p class="fragment" style="font-size: 1em; color: #fff; margin: 10px 0;">
                     Описываешь <span class="highlight">что хочешь</span> на естественном языке →<br>ИИ-агент пишет код
                 </p>
-                <blockquote class="fragment" style="border-left: 4px solid var(--accent); padding: 15px 25px; background: var(--bg-card); border-radius: 0 10px 10px 0; font-style: italic; color: #aaa; font-size: 0.85em;">
+                <blockquote class="fragment" style="border-left: 4px solid var(--accent); padding: 15px 25px; background: var(--bg-card); border-radius: 0 10px 10px 0; font-style: italic; color: #aaa; font-size: 0.7em;">
                     «Вы не пишете код — вы описываете вайб, а ИИ его реализует»
-                    <br><span style="color: #666; font-size: 0.85em;">— Андрей Карпаты, ex-OpenAI</span>
+                    <br><span style="color: #666; font-size: 0.7em;">— Андрей Карпаты, ex-OpenAI</span>
                 </blockquote>
-                <div style="display: flex; gap: 30px; margin-top: 25px;">
-                    <div class="fragment" style="flex:1; background: var(--bg-card); border-radius: 12px; padding: 18px;">
+                <div style="display: flex; gap: 16px; margin-top: 14px;">
+                    <div class="fragment" style="flex:1; background: var(--bg-card); border-radius: 12px; padding: 12px;">
                         <p style="color: var(--accent); font-weight: 700; margin: 0 0 6px 0;">Для разработчиков</p>
                         <p style="margin: 0;">Ускорение в 5-10× на рутинных задачах</p>
                     </div>
-                    <div class="fragment" style="flex:1; background: var(--bg-card); border-radius: 12px; padding: 18px;">
+                    <div class="fragment" style="flex:1; background: var(--bg-card); border-radius: 12px; padding: 12px;">
                         <p style="color: var(--accent); font-weight: 700; margin: 0 0 6px 0;">Для не-разработчиков</p>
                         <p style="margin: 0;">Создание рабочих прототипов самостоятельно</p>
                     </div>
@@ -503,7 +503,7 @@
                         <span class="tag">Браузерный агент</span>
                         <span class="tag">Корпоративные тарифы</span>
                     </div>
-                    <p style="margin-top: 20px; color: #888; font-size: 0.8em;">Российская разработка • Быстрое прототипирование</p>
+                    <p style="margin-top: 12px; color: #888; font-size: 0.65em;">Российская разработка • Быстрое прототипирование</p>
                 </div>
                 <aside class="notes">Для Колвира важно — российский сервис, без проблем с оплатой и VPN. Есть корпоративные тарифы на 50-100 пользователей.</aside>
             </section>
@@ -511,13 +511,13 @@
             <!-- Slide 11: Practice -->
             <section data-background-gradient="radial-gradient(circle at 50% 50%, #0a1628, #0a0a0f)">
                 <h2>🧪 Практика: Генератор тест-кейсов</h2>
-                <p style="color: #aaa; font-size: 0.9em;">Приложение, которое из спецификации генерирует тест-кейсы</p>
+                <p style="color: #aaa; font-size: 0.6em;">Приложение, которое из спецификации генерирует тест-кейсы</p>
                 <div class="wireframe">
                     <div class="wireframe-screen fragment">
                         <h3>Экран 1</h3>
                         <div class="wireframe-placeholder">
                             📄 Загрузка документа<br><br>
-                            <span style="font-size: 0.9em; color: #555;">Спецификация / Требования</span>
+                            <span style="font-size: 0.6em; color: #555;">Спецификация / Требования</span>
                         </div>
                         <div class="wireframe-placeholder" style="height: 30px;">
                             ▶️ Сгенерировать тест-кейсы
@@ -535,7 +535,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="fragment" style="color: #888; font-size: 0.75em; text-align: center; margin-top: 15px;">
+                <p class="fragment" style="color: #888; font-size: 0.6em; text-align: center; margin-top: 15px;">
                     Сегодня — прототип с имитацией функционала (без реальной обработки)
                 </p>
                 <aside class="notes">Показать вайрфрейм, объяснить что будем делать. Подчеркнуть — пока имитация, оживление на следующих занятиях.</aside>
@@ -561,7 +561,7 @@
                         <p>Spec-Driven Development • Облачные агенты в репозитории • Автоматизация код-ревью</p>
                     </div>
                 </div>
-                <p class="fragment" style="color: var(--accent); margin-top: 25px; font-size: 0.9em; text-align: center;">
+                <p class="fragment" style="color: var(--accent); margin-top: 14px; font-size: 0.6em; text-align: center;">
                     Каждое занятие — новый уровень функциональности 📈
                 </p>
                 <aside class="notes">Кратко анонсировать — на 2-м занятии оживляем прототип, на 3-м продвинутые инструменты для разработчиков.</aside>
@@ -578,10 +578,10 @@
                     </ul>
                 </div>
                 <div class="fragment qa-channel">
-                    <p style="margin: 0 0 8px 0; color: #888; font-size: 0.8em;">Telegram-канал</p>
+                    <p style="margin: 0 0 8px 0; color: #888; font-size: 0.65em;">Telegram-канал</p>
                     <a href="https://t.me/vibecoding_chuikov" target="_blank">📢 Вайб-кодинг по Чуйкову</a>
                 </div>
-                <h2 class="fragment" style="text-align: center; margin-top: 30px;">Вопросы? 🙋</h2>
+                <h2 class="fragment" style="text-align: center; margin-top: 16px;">Вопросы? 🙋</h2>
                 <aside class="notes">Подвести итоги. Дать ссылку на канал. Оставить время на вопросы.</aside>
             </section>
 
@@ -596,9 +596,9 @@
             transitionSpeed: 'default',
             backgroundTransition: 'fade',
             center: true,
-            width: 960,
+            width: 1100,
             height: 700,
-            margin: 0.1,
+            margin: 0.08,
             minScale: 0.2,
             maxScale: 2.0,
             showNotes: false,

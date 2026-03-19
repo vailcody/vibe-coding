@@ -912,6 +912,34 @@
             letter-spacing: -0.02em;
             line-height: 1.1;
         }
+
+        /* ===========================================
+           EVOLUTION GRID — tools/approaches
+           =========================================== */
+        .slide-evolution {
+            align-items: flex-start;
+        }
+        .evolution-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 100%;
+        }
+        .evo-item {
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            border: 2px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 0.8rem 1.6rem;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .evo-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -1005,6 +1033,42 @@
          =========================================== -->
     <section class="slide slide-phrase" data-slide="3d">
         <h2 class="phrase-text reveal">И это в основном<br>работает&hellip;</h2>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3e — ПРОСТОТА ЗАКОНЧИЛАСЬ
+         =========================================== -->
+    <section class="slide slide-phrase" data-slide="3e">
+        <h2 class="phrase-text reveal" style="font-size: clamp(2.2rem, 5vw, 4.5rem);">Но простота<br>быстро закончилась</h2>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3f — ЭКОСИСТЕМА УСЛОЖНЯЕТСЯ
+         =========================================== -->
+    <section class="slide slide-evolution" data-slide="3f">
+        <span class="slide-number reveal">—</span>
+        <h2 class="reveal" style="margin-bottom: 2rem;">Вайб-кодинг зреет</h2>
+        <div class="evolution-grid reveal">
+            <div class="evo-item">MCP</div>
+            <div class="evo-item">Скиллы</div>
+            <div class="evo-item">Хуки</div>
+            <div class="evo-item">Субагенты</div>
+            <div class="evo-item">Spec-Driven Development</div>
+            <div class="evo-item">Мультиагентные системы</div>
+        </div>
+        <p class="reveal" style="font-family: var(--font-body); font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: var(--text-secondary); margin-top: 2.5rem; max-width: 100%;">
+            Инструментов, подходов и фреймворков становится больше с каждым днём
+        </p>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3g — НО ВСЁ РАВНО ДОСТУПНО
+         =========================================== -->
+    <section class="slide slide-phrase" data-slide="3g">
+        <h2 class="phrase-text reveal" style="font-size: clamp(2rem, 5vw, 4.5rem);">Но остаётся доступным<br>для всех</h2>
+        <p class="reveal" style="font-family: var(--font-body); font-size: clamp(1.1rem, 2vw, 1.5rem); color: var(--text-secondary); margin-top: 1.5rem; text-align: center;">
+            Даже без технического бэкграунда
+        </p>
     </section>
 
     <!-- ===========================================

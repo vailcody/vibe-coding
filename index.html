@@ -1025,6 +1025,59 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===========================================
+           HARVI.PRO SLIDE
+           =========================================== */
+        .harvi-layout {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .harvi-screenshot {
+            flex: 1.2;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .harvi-screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .harvi-info {
+            flex: 1;
+        }
+        .promo-code {
+            margin-top: 1.5rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            display: inline-block;
+        }
+        .promo-label {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .promo-value {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+        @media (max-width: 768px) {
+            .harvi-layout {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1321,16 +1374,27 @@
     <!-- ===========================================
          SLIDE 10 — HARVI.PRO
          =========================================== -->
-    <section class="slide slide-10" data-slide="10">
+    <section class="slide slide-10 slide-harvi" data-slide="10">
         <div class="geo-outline"></div>
         <span class="slide-number reveal">10</span>
         <h2 class="reveal">harvi.pro</h2>
-        <ul class="content-list stagger-list">
-            <li>Российская разработка</li>
-            <li>Без VPN, оплата российской картой</li>
-            <li>Быстрое прототипирование</li>
-            <li>Корпоративные тарифы</li>
-        </ul>
+        <div class="harvi-layout reveal">
+            <div class="harvi-screenshot">
+                <img src="harvi-screenshot.jpg" alt="harvi.pro — браузерный AI-агент">
+            </div>
+            <div class="harvi-info">
+                <ul class="content-list stagger-list">
+                    <li>Российская разработка</li>
+                    <li>Без VPN, оплата российской картой</li>
+                    <li>Быстрое прототипирование</li>
+                    <li>Корпоративные тарифы</li>
+                </ul>
+                <div class="promo-code reveal">
+                    <span class="promo-label">Промокод</span>
+                    <span class="promo-value">chuikoff_harvi_2026</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ===========================================

@@ -940,6 +940,25 @@
             border-color: var(--accent);
             transform: translateY(-2px);
         }
+
+        /* ===========================================
+           MAP IMAGE SLIDE
+           =========================================== */
+        .slide-map {
+            align-items: center;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 1rem;
+        }
+        .map-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+        }
     </style>
 </head>
 <body>
@@ -1110,46 +1129,11 @@
     <!-- ===========================================
          SLIDE 6 — КАРТА ИНСТРУМЕНТОВ
          =========================================== -->
-    <section class="slide slide-6" data-slide="6">
+    <section class="slide slide-6 slide-map" data-slide="6">
         <span class="slide-number reveal">06</span>
         <h2 class="reveal">Карта инструментов</h2>
-        <div class="card-grid">
-            <div class="card highlighted">
-                <h3>Браузерные агенты</h3>
-                <ul>
-                    <li>Lovable</li>
-                    <li>Replit</li>
-                    <li>v0</li>
-                    <li>Bolt</li>
-                    <li><strong>harvi.pro</strong></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Локальные IDE</h3>
-                <ul>
-                    <li>Cursor</li>
-                    <li>Windsurf</li>
-                    <li>Kodik</li>
-                    <li>harvi code</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>CLI-агенты</h3>
-                <ul>
-                    <li>Claude Code</li>
-                    <li>Codex</li>
-                    <li>Gemini CLI</li>
-                    <li>OpenClaw</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Специализированные</h3>
-                <ul>
-                    <li>Figma MCP</li>
-                    <li>GitHub Copilot</li>
-                    <li>Codeium</li>
-                </ul>
-            </div>
+        <div class="map-container reveal">
+            <img src="vibe-coding-map.jpg" alt="Vibe Coding Map — инструменты, MCP, модели, языки" class="map-img">
         </div>
     </section>
 

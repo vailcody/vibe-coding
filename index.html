@@ -959,6 +959,24 @@
             border-radius: 12px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
         }
+
+        /* ===========================================
+           MEME IMAGE SLIDE
+           =========================================== */
+        .slide-meme {
+            justify-content: center;
+            align-items: center;
+        }
+        .meme-container {
+            max-width: 700px;
+        }
+        .meme-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -1052,6 +1070,15 @@
          =========================================== -->
     <section class="slide slide-phrase" data-slide="3d">
         <h2 class="phrase-text reveal">И это в основном<br>работает&hellip;</h2>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3d-meme — VIBE CODING MEME
+         =========================================== -->
+    <section class="slide slide-meme" data-slide="3d-meme">
+        <div class="meme-container reveal">
+            <img src="vibe-meme.jpg" alt="Vibe coding is bad vs Vibe coding is the best" class="meme-img">
+        </div>
     </section>
 
     <!-- ===========================================

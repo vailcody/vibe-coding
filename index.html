@@ -1078,6 +1078,86 @@
                 flex-direction: column;
             }
         }
+
+        /* ===========================================
+           PLAN GRID — 3 columns
+           =========================================== */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .plan-col {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .plan-col-active {
+            border: 2px solid var(--accent);
+        }
+        .plan-col h3 {
+            font-family: var(--font-display);
+            font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+        .plan-hours {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+        .plan-col h4 {
+            font-family: var(--font-display);
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+        .plan-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .plan-col ul li {
+            font-family: var(--font-body);
+            font-size: clamp(0.65rem, 1vw, 0.8rem);
+            color: var(--text-secondary);
+            line-height: 1.5;
+            padding: 0.15rem 0;
+            padding-left: 0.8rem;
+            position: relative;
+        }
+        .plan-col ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        .plan-hw {
+            margin-top: 0.8rem;
+            padding-top: 0.6rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            font-family: var(--font-body);
+            font-size: clamp(0.65rem, 1vw, 0.8rem);
+            color: var(--text-secondary);
+        }
+        .plan-hw strong {
+            color: var(--text-primary);
+        }
+        @media (max-width: 768px) {
+            .plan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1130,6 +1210,61 @@
                 <p class="author-bio">
                     Проводил обучение вайб-кодингу в Яндекс, СберУниверситет, Синергии и Правительстве МО.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 2b — ПЛАН ОБУЧЕНИЯ
+         =========================================== -->
+    <section class="slide slide-plan" data-slide="2b">
+        <span class="slide-number reveal">—</span>
+        <h2 class="reveal">План обучения</h2>
+        <div class="plan-grid reveal">
+            <div class="plan-col plan-col-active">
+                <h3>Занятие 1 <span class="plan-hours">1 час</span></h3>
+                <h4>Создаём прототип</h4>
+                <ul>
+                    <li>Введение в вайбкодинг</li>
+                    <li>Карта фреймворков и инструментов</li>
+                    <li>Создание прототипа с помощью Replit, Lovable, v0, Харви</li>
+                    <li>Отличия платформ</li>
+                    <li>Открыли в Cursor и запустили локально</li>
+                </ul>
+                <div class="plan-hw">
+                    <strong>ДЗ:</strong> Создать прототип для своего проекта
+                </div>
+            </div>
+            <div class="plan-col">
+                <h3>Занятие 2 <span class="plan-hours">2 часа</span></h3>
+                <h4>Итеративная доработка и апгрейд</h4>
+                <ul>
+                    <li>Установка и настройка рабочего окружения</li>
+                    <li>Работа с git</li>
+                    <li>Запуск и оживление прототипа в Cursor</li>
+                    <li>Экономное использование Cursor</li>
+                    <li>Режимы работы кодинг-агентов</li>
+                    <li>Подключение и использование MCP</li>
+                    <li>Работа с контекстом и правилами</li>
+                    <li>Стратегии работы с ошибками агентов</li>
+                </ul>
+                <div class="plan-hw">
+                    <strong>ДЗ:</strong> Развернуть прототип в Cursor и доработать
+                </div>
+            </div>
+            <div class="plan-col">
+                <h3>Занятие 3 <span class="plan-hours">1 час</span></h3>
+                <h4>Продвинутый вайбкодинг</h4>
+                <ul>
+                    <li>Spec-Driven Development &mdash; приложения через спецификации</li>
+                    <li>Установка и настройка OpenSpec в Cursor</li>
+                    <li>Создание своего MCP с помощью SDD</li>
+                    <li>Голосовой ввод в вайб-кодинге</li>
+                    <li>Feedback loop: AI Code Review, Static Analysis, VSCode Ext</li>
+                </ul>
+                <div class="plan-hw">
+                    <strong>ДЗ:</strong> Установить OpenSpec и продолжить доработку
+                </div>
             </div>
         </div>
     </section>

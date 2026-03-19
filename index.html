@@ -1158,6 +1158,55 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===========================================
+           COMPARE TABLE
+           =========================================== */
+        .compare-table {
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .compare-header, .compare-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 1fr;
+        }
+        .compare-header {
+            background: var(--bg-secondary);
+        }
+        .compare-row {
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .compare-cell {
+            padding: 1rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: clamp(0.8rem, 1.3vw, 1rem);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .compare-label {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+            background: var(--bg-secondary);
+        }
+        .compare-head {
+            font-family: var(--font-display);
+            font-weight: 800;
+            color: var(--text-primary);
+            font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+        }
+        @media (max-width: 768px) {
+            .compare-header, .compare-row {
+                grid-template-columns: 100px 1fr 1fr;
+            }
+            .compare-cell {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1528,6 +1577,39 @@
                     <span class="promo-label">Промокод</span>
                     <span class="promo-value">chuikoff_harvi_2026</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 10b — ПОД КАПОТОМ: СРАВНЕНИЕ
+         =========================================== -->
+    <section class="slide slide-compare" data-slide="10b">
+        <span class="slide-number reveal">—</span>
+        <h2 class="reveal">Под капотом: как работают браузерные агенты</h2>
+        <p class="reveal" style="font-family: var(--font-body); font-size: clamp(1rem, 1.6vw, 1.25rem); color: var(--text-secondary); margin-bottom: 1.5rem;">
+            <strong style="color: var(--text-primary);">Фреймворк</strong> &mdash; набор готовых компонентов и инструментов, которые не нужно писать с нуля
+        </p>
+        <div class="compare-table reveal">
+            <div class="compare-header">
+                <div class="compare-cell compare-label"></div>
+                <div class="compare-cell compare-head">harvi.pro / v0 / Bolt</div>
+                <div class="compare-cell compare-head">Replit</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell compare-label">Фреймворк</div>
+                <div class="compare-cell">Next.js &mdash; популярный, большое сообщество, легко найти решения</div>
+                <div class="compare-cell">Собственный fullstack &mdash; фронт и бэк отдельно, менее переносимо</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell compare-label">Среда</div>
+                <div class="compare-cell">Веб-контейнеры &mdash; приложение работает прямо в браузере</div>
+                <div class="compare-cell">Виртуальная машина &mdash; проект на сервере Replit</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell compare-label">Деплой</div>
+                <div class="compare-cell">Нужен внешний сервис (Vercel, Netlify и др.)</div>
+                <div class="compare-cell">Встроенный деплой (Autoscale, Reserved VM)</div>
             </div>
         </div>
     </section>

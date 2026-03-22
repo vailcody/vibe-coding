@@ -772,30 +772,28 @@
     </section>
 
     <!-- =======================================
-         SLIDE 5 — DIFY: ЧТО ЭТО
+         SLIDE 5 — DIFY: РОЛЬ В НАШЕМ ПРОЕКТЕ
          ======================================= -->
     <section class="slide" data-slide="5">
         <span class="slide-number reveal">05</span>
-        <h2 class="reveal">Dify</h2>
-        <p class="subtitle reveal" style="margin-bottom: 1.5rem;">Визуальный конструктор AI-воркфлоу</p>
-        <div class="card-grid">
-            <div class="card highlighted">
-                <h3>Зачем?</h3>
-                <p>Сложные AI-пайплайны без кода: парсинг документов, генерация, классификация. Визуальный drag-and-drop билдер.</p>
-            </div>
-            <div class="card">
-                <h3>API из коробки</h3>
-                <p>Каждый воркфлоу получает REST API. Вызываем из своего приложения одним HTTP-запросом.</p>
-            </div>
-            <div class="card">
-                <h3>Наш кейс</h3>
-                <p>Загружаем спецификацию → парсим текст → LLM генерирует тест-кейсы → возвращаем JSON.</p>
-            </div>
-            <div class="card">
-                <h3>Альтернативы</h3>
-                <p>n8n, Make, Langflow. Dify — опенсорс, self-hosted, заточен на LLM-пайплайны.</p>
-            </div>
+        <h2 class="reveal">Роль Dify в проекте</h2>
+        <p class="subtitle reveal" style="margin-bottom: 1.5rem;">AI-бэкенд, который делает всю тяжёлую работу</p>
+        <div class="flow-diagram reveal" style="margin-bottom: 2rem;">
+            <div class="flow-node">📄 Файл</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Doc Extractor</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node highlighted">LLM</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">JSON</div>
         </div>
+        <ul class="content-list stagger-list">
+            <li><strong>Получает файл</strong> — спецификацию требований к продукту</li>
+            <li><strong>Парсит документ</strong> — извлекает текст из PDF, DOCX, TXT</li>
+            <li><strong>Отправляет в LLM</strong> — модель генерирует тест-кейсы по требованиям</li>
+            <li><strong>Возвращает структурированный JSON</strong> — готовые данные для нашего приложения</li>
+            <li><strong>Вызываем по API</strong> — одним HTTP-запросом из нашего бэкенда, получаем ответ и сохраняем в базу</li>
+        </ul>
     </section>
 
     <!-- =======================================

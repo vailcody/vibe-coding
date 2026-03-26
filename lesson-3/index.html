@@ -1256,25 +1256,25 @@
     <section class="slide" data-slide="21">
         <span class="slide-number reveal">24</span>
         <h2 class="reveal">Подключаем к Cursor</h2>
-        <p class="subtitle reveal" style="margin-bottom: 1rem;">Один JSON-файл — и агент видит ваш сервер</p>
+        <p class="subtitle reveal" style="margin-bottom: 1rem;">Remote-сервер через HTTP + Bearer-токен</p>
         <div class="code-block reveal" style="font-size: 0.8rem;">
             <span class="comment">// .cursor/mcp.json</span><br><br>
             {<br>
             &nbsp;&nbsp;"mcpServers": {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;"<strong>test-cases</strong>": {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"command": "node",<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"args": ["./build/index.js"],<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"env": {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"DATABASE_URL": "postgresql://..."<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"<strong>testgen</strong>": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "http",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"url": "http://127.0.0.1:3333/mcp",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"headers": {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Authorization": "Bearer app-1WaiItfwId..."<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             &nbsp;&nbsp;&nbsp;&nbsp;}<br>
             &nbsp;&nbsp;}<br>
             }
         </div>
         <ul class="content-list stagger-list" style="margin-top: 1rem;">
-            <li>Cursor перезапускает сервер при изменении mcp.json</li>
+            <li><code>type: "http"</code> — remote-сервер через Streamable HTTP</li>
+            <li><code>headers</code> — API-ключ в заголовке Authorization</li>
             <li>Tools появляются в <strong>Settings → MCP</strong> — можно проверить</li>
-            <li>Агент видит описания tools и <strong>сам решает</strong> когда вызвать</li>
         </ul>
     </section>
 

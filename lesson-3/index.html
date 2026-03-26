@@ -1035,24 +1035,27 @@
     <section class="slide" data-slide="8">
         <span class="slide-number reveal">16</span>
         <h2 class="reveal">MCP: Resources</h2>
-        <p class="subtitle reveal" style="margin-bottom: 1rem;">Данные для чтения — конфиги, документы, схемы</p>
-        <div class="code-block reveal" style="font-size: 0.8rem;">
-            <span class="comment">// Пример: ресурс — схема базы данных</span><br><br>
-            {<br>
-            &nbsp;&nbsp;"uri": "<strong>db://schema/test_cases</strong>",<br>
-            &nbsp;&nbsp;"name": "Test Cases Schema",<br>
-            &nbsp;&nbsp;"mimeType": "application/json",<br>
-            &nbsp;&nbsp;"description": "Database schema for test_cases table"<br>
-            }
+        <p class="subtitle reveal" style="margin-bottom: 1rem;">Read-only данные для контекста агента</p>
+        <div class="code-block reveal" style="font-size: 0.75rem;">
+            <span class="comment">// URI — просто имя ресурса. Сервер сам знает где взять данные.</span><br><br>
+            server.<strong>resource</strong>("db-schema", "db://schema/test_cases",<br>
+            &nbsp;&nbsp;async () => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Сервер сам ходит в БД и достаёт структуру</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const schema = await db.query(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SELECT column_name, data_type FROM information_schema.columns..."<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return { contents: [{ uri: "db://schema/test_cases", text: JSON.stringify(schema) }] };<br>
+            &nbsp;&nbsp;}<br>
+            );
         </div>
         <div class="card-grid" style="margin-top: 1rem;">
-            <div class="card">
-                <h3>Resources vs Tools</h3>
-                <p>Resources = GET-only, для контекста. Tools = действия, могут менять данные.</p>
+            <div class="card highlighted">
+                <h3>URI ≠ адрес</h3>
+                <p>Как REST endpoint <code>/api/users</code> — клиенту неважно, что внутри PostgreSQL. Сервер сам решает где взять данные.</p>
             </div>
             <div class="card">
-                <h3>Когда использовать</h3>
-                <p>Конфиги, документация, DB-схема, файловая структура — всё, что нужно агенту для понимания.</p>
+                <h3>Resources vs Tools</h3>
+                <p>Resources = read-only контекст (схема БД, конфиг, OpenAPI-спека). Tools = действия (создать, удалить, изменить).</p>
             </div>
         </div>
     </section>

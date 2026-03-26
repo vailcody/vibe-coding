@@ -807,24 +807,24 @@
     <section class="slide" data-slide="rules">
         <span class="slide-number reveal">04</span>
         <h2 class="reveal">Шаг 1: Rules</h2>
-        <p class="subtitle reveal" style="margin-bottom: 1rem;">Прежде чем что-то делать — настрой правила проекта</p>
-        <div class="code-block reveal" style="font-size: 0.75rem;">
-            <span class="comment"># .cursor/rules/mcp-server.mdc</span><br><br>
-            <strong>alwaysApply: true</strong><br><br>
-            ## Проект: MCP-сервер для управления тест-кейсами<br><br>
-            ### Стек<br>
-            - Node.js + TypeScript<br>
-            - @modelcontextprotocol/sdk + zod<br>
-            - PostgreSQL (Drizzle ORM)<br><br>
-            ### Структура<br>
-            src/index.ts — точка входа, регистрация tools<br>
-            src/tools/ — каждый tool в отдельном файле<br>
-            src/db.ts — подключение к БД<br><br>
-            ### Стиль кода<br>
-            - TypeScript strict mode<br>
-            - async/await, no callbacks<br>
-            - Zod для валидации input schema<br>
-            - Описания tools на английском (LLM лучше понимает)
+        <p class="subtitle reveal" style="margin-bottom: 1rem;">Промпт для генерации правил MCP-сервера</p>
+        <div class="code-block reveal" style="font-size: 0.65rem;">
+            <span class="comment">// Промпт для Cursor → генерирует .cursor/rules/mcp-server.mdc</span><br><br>
+            Сгенерируй правила разработки для кастомного MCP-сервера<br>
+            (домен: генерация и тест-кейсы, вызовы к бэкенду).<br><br>
+            <strong>1) Архитектура</strong><br>
+            - MCP — тонкая обёртка над HTTP API: все операции через<br>
+            &nbsp;&nbsp;HTTP-запросы к бэкенду (REST/JSON).<br>
+            - Запретить в слое MCP: прямое подключение к БД, SQL.<br>
+            - Бизнес-логика и проверки прав — на стороне API;<br>
+            &nbsp;&nbsp;MCP лишь маппит инструменты на вызовы API.<br><br>
+            <strong>2) Конфигурация и аутентификация</strong><br>
+            - Пользователь указывает: URL сервера MCP + MCP_API_KEY.<br><br>
+            <strong>3) Транспорт</strong><br>
+            - Только HTTP (Streamable HTTP по спецификации MCP).<br><br>
+            <strong>4) Реализация протокола</strong><br>
+            - Использовать официальный @modelcontextprotocol/sdk.<br>
+            - Не делать самописную реализацию MCP.
         </div>
     </section>
 

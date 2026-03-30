@@ -11,7 +11,7 @@ import Slide06PhraseGovoryu from './slides/Slide06PhraseGovoryu'
 import Slide07PhraseZapuskayu from './slides/Slide07PhraseZapuskayu'
 import Slide08PhraseWorks from './slides/Slide08PhraseWorks'
 import Slide09Meme from './slides/Slide09Meme'
-import Slide10Reasons from './slides/Slide10Reasons'
+// Slide10Reasons removed (Предпосылки к развитию)
 import Slide11SimplEnd from './slides/Slide11SimplEnd'
 import Slide12Evolution from './slides/Slide12Evolution'
 import Slide13Available from './slides/Slide13Available'
@@ -24,13 +24,15 @@ import Slide19CompetitorIntro from './slides/Slide19CompetitorIntro'
 import Slide20WhyAnalyze from './slides/Slide20WhyAnalyze'
 import Slide21HowToFind from './slides/Slide21HowToFind'
 import Slide22WhatToAnalyze from './slides/Slide22WhatToAnalyze'
-import Slide23AnalysisTools from './slides/Slide23AnalysisTools'
+// Slide23AnalysisTools removed (дублирует «Как искать»)
 import Slide24PrototypeIntro from './slides/Slide24PrototypeIntro'
+import SlideBrowserAgents from './slides/SlideBrowserAgents'
 import Slide25WhatIsPrototype from './slides/Slide25WhatIsPrototype'
-import Slide26CloudTools from './slides/Slide26CloudTools'
+// Slide26CloudTools removed (Облачные инструменты)
 import Slide27HowTheyWork from './slides/Slide27HowTheyWork'
+import SlideHarvi from './slides/SlideHarvi'
 import Slide28LiveDemo from './slides/Slide28LiveDemo'
-import Slide29PrototypeMethod from './slides/Slide29PrototypeMethod'
+// Slide29PrototypeMethod removed (Методология: от промпта до прототипа)
 import Slide30Summary from './slides/Slide30Summary'
 
 const slides: ComponentType<SlideProps>[] = [
@@ -43,7 +45,6 @@ const slides: ComponentType<SlideProps>[] = [
   Slide07PhraseZapuskayu,
   Slide08PhraseWorks,
   Slide09Meme,
-  Slide10Reasons,
   Slide11SimplEnd,
   Slide12Evolution,
   Slide13Available,
@@ -56,13 +57,12 @@ const slides: ComponentType<SlideProps>[] = [
   Slide20WhyAnalyze,
   Slide21HowToFind,
   Slide22WhatToAnalyze,
-  Slide23AnalysisTools,
-  Slide24PrototypeIntro,
+  Slide24PrototypeIntro,    // Создание прототипа
+  SlideBrowserAgents,       // NEW: Почему браузерные агенты?
   Slide25WhatIsPrototype,
-  Slide26CloudTools,
-  Slide27HowTheyWork,
+  Slide27HowTheyWork,       // Как работают
+  SlideHarvi,               // NEW: harvi.pro
   Slide28LiveDemo,
-  Slide29PrototypeMethod,
   Slide30Summary,
 ]
 

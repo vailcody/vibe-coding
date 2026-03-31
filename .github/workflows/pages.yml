@@ -27,13 +27,6 @@ jobs:
         working-directory: react-app
       - run: npm run build
         working-directory: react-app
-      # Copy static HTML presentations into the build output
-      - run: |
-          cp -r lesson-1 react-app/dist/
-          cp -r lesson-2 react-app/dist/
-          cp -r lesson-3 react-app/dist/
-          cp -r lecture-central-university react-app/dist/
-          cp -r pdf react-app/dist/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: react-app/dist

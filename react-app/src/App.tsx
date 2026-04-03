@@ -7,6 +7,7 @@ import Lesson3Page from './lessons/lesson-3/Lesson3'
 import CentralUniversityPage from './lessons/central-university/CentralUniversity'
 import CentralUniversity2Page from './lessons/central-university-2/CentralUniversity2'
 import Cohort3Lesson1Page from './lessons/cohort-3/lesson-1/Cohort3Lesson1'
+import Cohort3Lesson9Page from './lessons/cohort-3/lesson-9/Cohort3Lesson9'
 
 const courseLessons = [
   { to: '/lesson-1', title: 'Занятие 1', description: 'Создаём прототип', meta: '1 час · 19 марта' },
@@ -21,6 +22,7 @@ const centralUniversityLessons = [
 
 const cohort3Lessons = [
   { to: '/cohort-3/lesson-1', title: 'Занятие 1', description: 'Создаём прототип', meta: '3-й поток' },
+  { to: '/cohort-3/lesson-9', title: 'Занятие 9', description: 'Мобильная разработка', meta: 'React Native + Expo + FastAPI' },
 ]
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
       <Route path="/central-university/lecture" element={<CentralUniversityPage />} />
       <Route path="/central-university/lecture-2" element={<CentralUniversity2Page />} />
       <Route path="/cohort-3/lesson-1" element={<Cohort3Lesson1Page />} />
+      <Route path="/cohort-3/lesson-9" element={<Cohort3Lesson9Page />} />
     </Routes>
   )
 }

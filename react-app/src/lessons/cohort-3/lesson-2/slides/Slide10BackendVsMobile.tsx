@@ -25,9 +25,6 @@ export default function Slide10BackendVsMobile({}: SlideProps) {
           </ul>
         </div>
       </div>
-      <div className="quote reveal" style={{ marginTop: '1.5rem' }}>
-        Правило: обновление бэкенда = мгновенно. Обновление мобилки через сторы = дни проверки. Держите логику на сервере.
-      </div>
     </>
   )
 }

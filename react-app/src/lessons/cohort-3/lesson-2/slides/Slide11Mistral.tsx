@@ -5,35 +5,52 @@ export default function Slide11Mistral({}: SlideProps) {
     <>
       <span className="slide-number reveal">11</span>
       <h2 className="reveal">Транскрибация через Mistral</h2>
-      <pre className="code-block reveal" style={{
-        background: '#1a1a1a',
-        color: '#f8f8f2',
-        padding: '1.5rem',
-        borderRadius: '4px',
-        fontSize: 'clamp(0.8rem, 1.3vw, 1rem)',
-        lineHeight: 1.6,
-        overflowX: 'auto',
-        whiteSpace: 'pre-wrap',
-        fontFamily: 'monospace',
-        marginTop: '1rem'
-      }}>
-{`# FastAPI endpoint для транскрибации аудио
-from fastapi import FastAPI, UploadFile
-from mistralai import Mistral
-
-app = FastAPI()
-client = Mistral(api_key="YOUR_MISTRAL_API_KEY")
-
-@app.post("/transcribe")
-async def transcribe_audio(file: UploadFile):
-    audio_bytes = await file.read()          # Аудио от мобилки
-    result = client.audio.transcribe(audio_bytes)
-    return {"text": result.text}             # Возвращаем мобилке`}
-      </pre>
-      <div className="steps reveal" style={{ marginTop: '1.25rem', fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)' }}>
-        <div className="step"><span className="step-number">→</span><span className="step-text">Мобилка записывает аудио и отправляет на бэкенд</span></div>
-        <div className="step"><span className="step-number">→</span><span className="step-text">FastAPI вызывает Mistral → получает текст → сохраняет в БД</span></div>
-        <div className="step"><span className="step-number">→</span><span className="step-text">Мобилка получает транскрипцию и показывает пользователю</span></div>
+      <div className="card-grid stagger-list">
+        <div>
+          <h3 style={{ marginBottom: '1rem' }}>Почему Mistral?</h3>
+          <ul className="content-list">
+            <li>Работает без VPN в России</li>
+            <li>Регистрация по российскому номеру телефона</li>
+            <li>Есть LLM-модели и модели транскрибации</li>
+            <li>Щедрый бесплатный тир — хватит для личных проектов</li>
+          </ul>
+        </div>
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          <h3>Как это работает</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {[
+              ['📱', 'Мобилка', 'записывает аудио'],
+              ['⬇️', '', ''],
+              ['⚡', 'FastAPI', 'принимает файл'],
+              ['⬇️', '', ''],
+              ['🤖', 'Mistral', 'возвращает текст'],
+              ['⬇️', '', ''],
+              ['🗄️', 'База данных', 'сохраняет заметку'],
+              ['⬇️', '', ''],
+              ['📱', 'Мобилка', 'показывает транскрипцию'],
+            ].map(([icon, title, desc], i) => {
+              if (title === '') return (
+                <div key={i} style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>↓</div>
+              )
+              return (
+                <div key={i} style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  background: 'var(--bg-primary)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  borderRadius: '6px',
+                  padding: '0.4rem 0.7rem',
+                  fontSize: 'clamp(0.8rem, 1.3vw, 0.95rem)'
+                }}>
+                  <span>{icon}</span>
+                  <strong>{title}</strong>
+                  <span style={{ color: 'var(--text-secondary)' }}>— {desc}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </>
   )

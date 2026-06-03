@@ -3,6 +3,7 @@ import type { SlideProps } from '../../../components/PresentationShell'
 import type { ComponentType } from 'react'
 
 import Slide01Title from './slides/Slide01Title'
+import Slide02Author from './slides/Slide02Author'
 import Slide02Plan from './slides/Slide02Plan'
 import Slide03Monetization from './slides/Slide03Monetization'
 import Slide04Freelance from './slides/Slide04Freelance'
@@ -23,6 +24,7 @@ import Slide15Homework from './slides/Slide15Homework'
 
 const slides: ComponentType<SlideProps>[] = [
   Slide01Title,
+  Slide02Author,
   Slide02Plan,
   Slide03Monetization,
   Slide04Freelance,
